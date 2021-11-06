@@ -8,6 +8,7 @@ window.onload = function(){
   const curso = document.querySelector("#curso");
   const nome = document.querySelector("#nome");
 
+//Botão Cadastrar
   cadastrar.addEventListener("click", function(){
     let formdata = new FormData();
     formdata.append("nome",`${nome.value}`);
@@ -19,7 +20,22 @@ window.onload = function(){
       mode: 'cors',
       cache: 'default'
     })
-      .then(altert("Cadastro efetuado com sucesso!"));
+      .then(()=>{
+        altert("Cadastro efetuado com sucesso!");
+        limpar();
+      });
   });
+
+//Botão Limpar Campos
+  del.addEventListener("click", function(){
+    limpar();
+  });
+
+//Função Limpar Campos
+  function limpar(){
+    curso.value = '';
+    nome.value = '';
+    id.value = '';
+  }
 }
 
