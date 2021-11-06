@@ -9,19 +9,18 @@ window.onload = function(){
   const nome = document.querySelector("#nome");
 
 //Botão Cadastrar
-  cadastrar.addEventListener("click", function(){
+  cadastrar.addEventListener("click", function(){ 
     let formdata = new FormData();
     formdata.append("nome",`${nome.value}`);
-    formdata.append("curso", `${curso.value}`);
-
-    fetch('https://jussimarleal.com.br/exemplo_api/pessoa',{
+    formdata.append("curso",`${curso.value}`);
+    fetch('https://www.jussimarleal.com.br/exemplo_api/pessoa',{
       body:formdata,
       method: 'post',
       mode: 'cors',
       cache: 'default'
     })
       .then(()=>{
-        altert("Cadastro efetuado com sucesso!");
+        alert("Cadastro efetuado com sucesso!");
         limpar();
       });
   });
