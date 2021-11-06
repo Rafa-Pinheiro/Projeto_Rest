@@ -1,8 +1,9 @@
 window.onload = function(){
   const buscar = document.querySelector("#bid");
+  const del = document.querySelector("#deletar");
   const cad = document.querySelector("#cadastrar");
   const alt = document.querySelector("#alterar");
-  const del = document.querySelector("#deletar");
+  const delcad = document.querySelector("#deletarcad");
   const id = document.querySelector("#id");
   const curso = document.querySelector("#curso");
   const nome = document.querySelector("#nome");
