@@ -19,10 +19,10 @@ window.onload = function(){
       mode: 'cors',
       cache: 'default'
     })
-      .then(()=>{
-        alert("Cadastro efetuado com sucesso!");
-        limpar();
-      });
+      .then(
+        limpar(),
+        alert("Cadastro efetuado com sucesso!")
+      );
   });
 
 //Botão Limpar Campos
